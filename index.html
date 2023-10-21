@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favico.png" sizes="32x32" type="image/png">
+    <title>Pass Ch3ck</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength <span>Checker</span></h1>
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password">
+            <span id="togglePassword" class="eye-icon" onclick="togglePasswordVisibility()">&#128065;</span>
+            <button type="submit"><img src=""></button>
+            <p id="message">Password is <span id="strength"></span></p>
+            <button id="copyPasswordButton">Copy Password</button>
+            <p id="message">Password is <span id="strength"></span></p>
+        </div>
+        <div class="info">
+            <h1>How To Choose A <span>Strong</span> Password?</h1>
+            <ul>
+                <li>Use a combination of symbols, numbers, and both uppercase and lowercase letters.</li>
+                <li>Make sure the password length is 8 characters or longer.</li>
+                <li>Avoid using easily guessable information like common words, phrases, or personal details.</li>
+                <li>Consider using passphrases, which are long and memorable sequences of words.</li>
+                <li>Use different passwords for each of your accounts to enhance security.</li>
+                <li>Change your passwords regularly, especially for critical accounts.</li>
+                <li>Consider using a password manager to generate and store strong, unique passwords.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
