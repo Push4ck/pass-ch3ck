@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favico.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/mquery.css">
+    <link rel="icon" href="/assets/images/favico.png" sizes="32x32" type="image/png">
     <title>Pass Ch3ck</title>
 </head>
 <body>
@@ -13,24 +14,46 @@
         <div class="input-box">
             <input type="password" id="password" placeholder="Password">
             <span id="togglePassword" class="eye-icon" onclick="togglePasswordVisibility()">&#128065;</span>
-            <button type="submit"><img src=""></button>
+            <button type="submit"></button>
             <p id="message">Password is <span id="strength"></span></p>
             <button id="copyPasswordButton">Copy Password</button>
             <p id="message">Password is <span id="strength"></span></p>
         </div>
         <div class="info">
             <h1>How To Choose A <span>Strong</span> Password?</h1>
-            <ul>
-                <li>Use a combination of symbols, numbers, and both uppercase and lowercase letters.</li>
-                <li>Make sure the password length is 8 characters or longer.</li>
-                <li>Avoid using easily guessable information like common words, phrases, or personal details.</li>
-                <li>Consider using passphrases, which are long and memorable sequences of words.</li>
-                <li>Use different passwords for each of your accounts to enhance security.</li>
-                <li>Change your passwords regularly, especially for critical accounts.</li>
-                <li>Consider using a password manager to generate and store strong, unique passwords.</li>
+            <ul class="accordion">
+                <li>
+                    <input type="radio" name="accordion" id="first">
+                    <label for="first">Length</label>
+                    <div class="content">
+                        <p>The length of your password must be between 8 to 16 characters.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="second">
+                    <label for="second">Digit</label>
+                    <div class="content">
+                        <p>You password must contain numeric values (0 - 9)</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="third">
+                    <label for="third">Special Character</label>
+                    <div class="content">
+                        <p>Most common special characters are: !@#$%&()?</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="fourth">
+                    <label for="fourth">Unique</label>
+                    <div class="content">
+                        <p>You have to choose a most unique password.</p>
+                    </div>
+                </li>
             </ul>
         </div>
+        <div id="successMessage" class="success-message"></div>
     </div>
-    <script src="main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
