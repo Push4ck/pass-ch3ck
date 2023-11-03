@@ -12,15 +12,22 @@ togglePassword.addEventListener('click', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-
-const copyPasswordButton = document.getElementById("copyPasswordButton");
+    const copyPasswordButton = document.getElementById("copyPasswordButton");
+    const successMessage = document.getElementById("successMessage");
 
     copyPasswordButton.addEventListener("click", function () {
         const passwordInput = document.getElementById("password");
         passwordInput.select();
         document.execCommand("copy");
-        // Optionally provide user feedback
-        alert("Password copied to clipboard!");
+
+        // Display the success message in a green box
+        successMessage.textContent = "Password copied to clipboard!";
+        successMessage.style.display = "block";
+
+        // Set a timer to hide the success message after 1.5 seconds
+        setTimeout(function () {
+            successMessage.style.display = "none";
+        }, 1500);
     });
 });
 
